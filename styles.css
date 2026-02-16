@@ -1,0 +1,49 @@
+:root{
+  --bg:#f4f7fb;
+  --card:#ffffff;
+  --accent:#4b6cff;
+  --muted:#6b7280;
+  --danger:#ff6b6b;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center}
+.container{width:100%;max-width:560px;margin:40px;padding:28px;background:var(--card);border-radius:12px;box-shadow:0 6px 20px rgba(18,38,63,0.08)}
+.header{margin-bottom:18px}
+.header h1{margin:0;font-size:1.5rem;color:#0f1724}
+.tag{margin:6px 0 0;color:var(--muted)}
+.input-area{display:flex;gap:8px;margin:18px 0}
+#task-input{flex:1;padding:10px 12px;font-size:1rem;border:1px solid #e6e9ee;border-radius:8px;outline:none}
+#task-input:focus{box-shadow:0 0 0 3px rgba(75,108,255,0.12);border-color:var(--accent)}
+#add-btn{background:var(--accent);color:#fff;border:none;padding:10px 14px;border-radius:8px;cursor:pointer}
+#add-btn:hover{transform:translateY(-1px)}
+.task-list{list-style:none;padding:0;margin:0}
+.task-item{display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:8px;margin-bottom:8px;border:1px solid #f0f2f5;background:linear-gradient(180deg,rgba(255,255,255,0.6),transparent)}
+.task-left{display:flex;align-items:center;gap:12px;flex:1}
+.task-text{cursor:pointer}
+.task-text.completed{text-decoration:line-through;color:var(--muted)}
+.task-text.completed::after{content:""}
+.actions{display:flex;gap:8px}
+.delete-btn{background:transparent;border:1px solid var(--danger);color:var(--danger);padding:6px 8px;border-radius:6px;cursor:pointer}
+.delete-btn:hover{background:rgba(255,107,107,0.06)}
+.footer{margin-top:14px;color:var(--muted);font-size:0.9rem;text-align:center}
+
+.status-badge{
+  display:inline-block;
+  margin-left:10px;
+  padding:4px 8px;
+  font-size:0.75rem;
+  border-radius:999px;
+  background:#eef2ff;
+  color:#334155;
+  border:1px solid rgba(75,108,255,0.12);
+  cursor:pointer;
+  user-select:none;
+}
+
+.status-badge.done{
+  background:rgba(34,197,94,0.12);
+  color:#065f46;
+  border-color:rgba(16,185,129,0.12);
+}
+
+@media (max-width:480px){.container{margin:18px;padding:18px}}
